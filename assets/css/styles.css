@@ -1,96 +1,392 @@
-body, html {
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
+:root {
+  --azul-escuro: #052236;
+  --acinzentado: #254548;
+  --white: #ffffff;
+}
 
-/* Header */
-.header {
-  margin-top: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+.title-grid {
+  color: #254548;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   width: 100%;
-  height: 120px;
-  background-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Gotham, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navigation {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: League Spartan, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+/* Cabeçalho */
+.header {
+  z-index: 3;
+  width: 100%;
+  position: absolute;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-self: center;
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  width: 150px;
+  height: 136px;
 }
 
-.logo img {
-  width: 150px;
-  height: 136.672px;
+.logo-wrapper img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .menu {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .menu-button {
   background: none;
   border: none;
-  color: #fff;
+  color: #ffffff;
   font-size: 18px;
-  font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .menu-icon {
   font-size: 22px;
+  margin-left: 5px;
 }
 
 /* Banner */
-.section-hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.banner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner {
+  background-color: var(--acinzentado);
+  background-image: linear-gradient(#0003, #0003), url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/65253dd6816c4f99f9996839_imagempraianova.webp);
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  height: 100vh;
+  padding-top: 120px;
+  position: relative;
 }
 
 .banner-content {
-  z-index: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 35vw;
+  height: 70%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.button-wrapper {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+}
+
+.button.primary {
+  border-color: var(--azul-escuro);
+  background-color: var(--azul-escuro);
+  align-items: center;
+  margin-top: 0;
+  padding: 15px 20px;
+  font-size: 18px;
+  display: flex;
+}
+
+.button {
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  background-color: #20cd55;
+  border: 2px solid #20cd55;
+  border-radius: 4px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.text-block-37 {
+  font-weight: 900;
+}
+
+.text_button_banner {
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .cta-button {
-  background-color: #002e50;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
 }
 
-.cta-button:hover {
-  background-color: #001f38;
+.button.primary:hover {
+  background-color: var(--white);
+  color: #000000;
+  border-color: var(--white);
+}
+
+/* Carrossel */
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 25px;
+  height: 25px;
+  color: #000000;
+}
+
+.swiper-button-prev::after {
+  content: '\f104';
+  font-family: 'Font Awesome 5 free';
+  font-weight: 900;
+}
+
+.swiper-button-next::after {
+  content: '\f105';
+  font-family: 'Font Awesome 5 free';
+  font-weight: 900;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  box-shadow: 0 0 20px rgba(51, 51, 51, .4);
+}
+
+.swiper-pagination-bullet-active {
+  background: #222;
+  box-shadow: 0 0 20px rgba(51, 51, 51, .4);
+}
+
+/* Seção de Destaques */
+.highlights {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+}
+
+.highlight-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.highlight-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.highlight-item p {
+  font-size: 1rem;
+}
+
+/* Seção de Galeria */
+.gallery {
+  padding: 60px 0;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.section {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.divisor_section {
+  background-color: var(--midnight-blue);
+  background-image: url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/6512e7d62c79da02f71bf34a_BC1.webp);
+  background-position: 50%;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.text_divisor {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.div-block-14 {
+  background-image: linear-gradient(#00000080, #00000080),
+    url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/CLUB-HOUSE-2-compressed.jpg);
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+  height: 53.8rem;
+}
+
+.div-block-21 {
+  z-index: 99;
+  width: 100%;
+  position: relative;
+}
+
+.div-block-22 {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 60px;
+  padding: 10vh;
+  display: flex;
+}
+
+.block-center {
+  padding: 10vh;
+}
+
+.title_virtual,
+.title_area,
+.title_maps {
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.title-grid.mt.center {
+  color: var(--black);
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 40px;
+}
+
+.block-center.supenderblock {
+  padding-bottom: 0;
 }

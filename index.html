@@ -3,29 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conviver Riviera Clone</title>
+  <title>Conviver Riviera</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header id="header-top" class="header">
-    <div class="logo">
-      <img src="assets/img/logo.webp" alt="Conviver Riviera Logo">
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo-wrapper">
+          <img class="logo" src="assets/img/logo.webp" alt="Conviver Riviera Logo" >
+        </div>
+        <nav class="menu">
+          <button class="menu-button">
+            Menu
+            <span class="menu-icon">&#9776;</span>
+          </button>
+        </nav>
     </div>
-    <nav class="menu">
-      <button class="menu-button">
-        Menu
-        <span class="menu-icon">&#9776;</span>
-      </button>
-    </nav>
+    </div>
   </header>
 
   <!-- Banner -->
-  <section id="banner" class="section-hero">
-    <img src="assets/img/bgparallax.webp" alt="Banner Riviera" class="banner-image">
-    <div class="banner-content">
-      <button class="cta-button">QUERO MAIS INFORMAÇÕES</button>
+  <section class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <div class="cta-button">
+          <a href="#contato-forms" class="button primary">
+            <div class="text-block-37">
+              <strong class="text_button_banner">Quero mais informações</strong>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="divisor_section">
+      <h1 class="text_divisor">
+        O Primeiro loteamento fechado com a praia do Cariri
+      </h1>
+    </div>
+    <div class="div-block-14">
+      <div class="container">
+        <div class="block-center block-styles">
+          <div class="piscina-infinita">
+            <img src="" alt="" class="piscinafoto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-grey">
+    <div class="container">
+      <div class="block-center">
+        <h2 class="title_virtual">CONFIRA OS PRINCIPAIS ESPAÇOS DO EMPREENDIMENTO</h2>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/portaria.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/academia.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/brinquedoteca.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/clubhouse.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/deck.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/esportes.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imagem-slide">
+                  <img src="assets/img/slidesimgs/praiaprivativa.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Tour Virtual -->
+  <section class="section">
+    <div class="container">
+      <div class="block-center supenderblock">
+        <h3 class="title-grid mt center space-tour">tour virtual do empreendimento</h3>
+      </div>
+      <div class="div-block-22">
+        <div class="w-embed w-iframe">
+          <iframe loading="lazy" src="https://tour.instacasa.com.br/conviver-riviera/" 
+          name="Conviver Riviera" width="100%" height="450px" frameborder="0" allowfullscreen="true" 
+          allow="fullscreen; accelerometer; gyroscope; magnetometer; vr; xr; xr-spatial-tracking; 
+          camera; microphone" data-rocket-lazyload="fitvidscompatible" 
+          data-lazy-src="https://tour.instacasa.com.br/conviver-riviera/" 
+          data-ll-status="loaded" class="entered lazyloaded"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Google Maps -->
+  <section id="loc-maps" class="section">
+    <div class="container z-20">
+      <div class="block-center">
+      <h5 class="title_maps">Seu lugar privilegiado perto de tudo que Você mais precisa.</h5>
+      <div class="div-block-21">
+          <div class="w-embed w-iframe"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15830.861503962857!2d-39.3321866!3d-7.2731934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a19d32d8aa6941%3A0xf86133e81ca2ea19!2sConviver%20Riviera!5e0!3m2!1spt-BR!2sbr!4v1698153164675!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0;" allowfullscreen="" Title="Mapa do site" referrerpolicy="no-referrer-when-downgrade" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15830.861503962857!2d-39.3321866!3d-7.2731934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a19d32d8aa6941%3A0xf86133e81ca2ea19!2sConviver%20Riviera!5e0!3m2!1spt-BR!2sbr!4v1698153164675!5m2!1spt-BR!2sbr"></iframe><noscript><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15830.861503962857!2d-39.3321866!3d-7.2731934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a19d32d8aa6941%3A0xf86133e81ca2ea19!2sConviver%20Riviera!5e0!3m2!1spt-BR!2sbr!4v1698153164675!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0;" allowfullscreen="" Title="Mapa do site" referrerpolicy="no-referrer-when-downgrade"></iframe></noscript>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Destaques -->
+  <section class="highlights">
+    <div class="container">
+      <div class="highlight-item">
+        <h2>Praia Artificial</h2>
+        <p>Com 1000m² de área molhada.</p>
+      </div>
+      <div class="highlight-item">
+        <h2>Piscina com Borda Infinita</h2>
+        <p>Desfrute de momentos únicos.</p>
+      </div>
+      <div class="highlight-item">
+        <h2>Academia Equipada</h2>
+        <p>Qualidade de vida em movimento.</p>
+      </div>
+      <!-- Adicione mais itens conforme necessário -->
+    </div>
+  </section>
+
+  <!-- Seção de Galeria -->
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery-item">
+        <img src="assets/img/portaria.jpg" alt="Portaria">
+        <p>Portaria</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/praia_privativa.jpg" alt="Praia Privativa">
+        <p>Praia Privativa</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/club_house.jpg" alt="Club House">
+        <p>Club House</p>
+      </div>
+      <!-- Adicione mais itens conforme necessário -->
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contato-forms" class="contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <form action="enviar.php" method="post">
+        <input type="text" name="nome" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu Email" required>
+        <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Conviver Riviera. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
 </body>
 </html>
