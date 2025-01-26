@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conviver Riviera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Nanum+Myeongjo:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -16,12 +19,16 @@
         <div class="logo-wrapper">
           <img class="logo" src="assets/img/logo.webp" alt="Conviver Riviera Logo" >
         </div>
-        <nav class="menu">
-          <button class="menu-button">
+        <div class="menu-toggle-wrapper">
+          <div class="menu-text">
             Menu
-            <span class="menu-icon">&#9776;</span>
-          </button>
-        </nav>
+          </div>
+          <a class="nav-menu-open w-inline-block">
+            <div class="menu-open-div _5"></div>
+            <div class="menu-open-div _4"></div>
+            <div class="menu-open-div _3"></div>
+          </a>
+        </div>
     </div>
     </div>
   </header>
@@ -41,6 +48,7 @@
     </div>
   </section>
 
+  <!-- Divisor -->
   <section class="section">
     <div class="divisor_section">
       <h1 class="text_divisor">
@@ -58,53 +66,84 @@
     </div>
   </section>
 
+  <!-- Carrossel -->
   <section class="section section-grey">
-    <div class="container">
+    <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/GRAFISMOS_Prancheta-1.png" 
+    alt="" class="image-241">
+    <div class="container carrossel">
       <div class="block-center">
         <h2 class="title_virtual">CONFIRA OS PRINCIPAIS ESPAÇOS DO EMPREENDIMENTO</h2>
-
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/portaria.jpg" alt="">
+                  <div class="text-content">
+                    <h2>PORTARIA</h2>
+                    <p>beleza e imponência desde a entrada.</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/academia.jpg" alt="">
+                  <div class="text-content">
+                    <h2>ACADEMIA</h2>
+                    <p>Qualidade de vida em movimento</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/brinquedoteca.jpg" alt="">
+                  <div class="text-content">
+                    <h2>BRINQUEDOTECA</h2>
+                    <p>Diversão que vai fazer parte da vida dos pequenos</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/clubhouse.jpg" alt="">
+                  <div class="text-content">
+                    <h2>CLUBHOUSE</h2>
+                    <p>Um Clube que é a extensão da sua casa</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/deck.jpg" alt="">
+                  <div class="text-content">
+                    <h2>DECK</h2>
+                    <p>Nosso espaço de lazer</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/esportes.jpg" alt="">
+                  <div class="text-content">
+                    <h2>PRAÇA DE ESPORTES</h2>
+                    <p>Praça de esportes completa</p>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="imagem-slide">
                   <img src="assets/img/slidesimgs/praiaprivativa.jpg" alt="">
+                  <div class="text-content">
+                    <h2>PRAIA DO RIVEIRA</h2>
+                    <p>O unico da região com praia artificial privativa</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
+          <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
@@ -153,44 +192,45 @@
   </section>
 
 <!-- Seção de swiperthumbs -->
-<div id="fullscreen-swiper" class="fullscreen ">
-  <div class="swiper-button-close">×</div>
-  <div class="swiper-container gallery-top">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem1.jpg" alt="Imagem 1" />
+<section class="swiperthumb">
+  <div id="fullscreen-swiper" class="fullscreen hidden">
+    <div class="swiper-button-close">×</div>
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem1.jpg" alt="Imagem 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem2.jpg" alt="Imagem 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem3.jpg" alt="Imagem 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem4.jpg" alt="Imagem 4" />
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem2.jpg" alt="Imagem 2" />
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem3.jpg" alt="Imagem 3" />
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem4.jpg" alt="Imagem 4" />
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem1.jpg" alt="Imagem 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem2.jpg" alt="Imagem 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem3.jpg" alt="Imagem 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/gridimgs/imagem4.jpg" alt="Imagem 4" />
+        </div>
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
-  <div class="swiper-container gallery-thumbs">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem1.jpg" alt="Imagem 1" />
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem2.jpg" alt="Imagem 2" />
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem3.jpg" alt="Imagem 3" />
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/img/gridimgs/imagem4.jpg" alt="Imagem 4" />
-      </div>
-    </div>
-  </div>
-</div>
-
+</section>
   <!-- Seção de Google Maps -->
   <section id="loc-maps" class="section">
     <div class="container z-20">
@@ -204,52 +244,16 @@
     </div>
   </section>
 
-  <!-- Seção de Destaques -->
-  <section class="highlights">
-    <div class="container">
-      <div class="highlight-item">
-        <h2>Praia Artificial</h2>
-        <p>Com 1000m² de área molhada.</p>
-      </div>
-      <div class="highlight-item">
-        <h2>Piscina com Borda Infinita</h2>
-        <p>Desfrute de momentos únicos.</p>
-      </div>
-      <div class="highlight-item">
-        <h2>Academia Equipada</h2>
-        <p>Qualidade de vida em movimento.</p>
-      </div>
-      <!-- Adicione mais itens conforme necessário -->
-    </div>
-  </section>
-
-  <!-- Seção de Galeria -->
-  <section class="gallery">
-    <div class="container">
-      <div class="gallery-item">
-        <img src="assets/img/portaria.jpg" alt="Portaria">
-        <p>Portaria</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/praia_privativa.jpg" alt="Praia Privativa">
-        <p>Praia Privativa</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/club_house.jpg" alt="Club House">
-        <p>Club House</p>
-      </div>
-      <!-- Adicione mais itens conforme necessário -->
-    </div>
-  </section>
 
   <!-- Seção de Contato -->
   <section id="contato-forms" class="contact">
     <div class="container">
       <h2>Entre em Contato</h2>
       <form action="enviar.php" method="post">
-        <input type="text" name="nome" placeholder="Seu Nome" required>
-        <input type="email" name="email" placeholder="Seu Email" required>
-        <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="email" name="email" placeholder="Telefone" required>
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
