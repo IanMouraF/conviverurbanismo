@@ -213,22 +213,22 @@
   }
 
   .menu-text {
-    display: none; /* Esconda o texto do menu em dispositivos móveis */
+    display: none; 
   }
 
   .menu-toggle-wrapper {
     margin-top: 0;
     margin-right: 40px;
-    position: relative; /* Importante para o posicionamento do dropdown */
+    position: relative; 
     z-index: 100;
   }
 
   .dropdown-menu {
-    position: absolute; /* Volta para absolute */
-    top: 100%; /* Posiciona o menu abaixo do botão */
-    right: 0; /* Alinha o menu à direita */
-    width: 200px; /* Defina uma largura para o menu */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para o menu */
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
 
   .dropdown-menu ul {
@@ -238,7 +238,7 @@
   }
 
   .dropdown-menu li {
-    text-align: center; /* Alinhe o texto à esquerda */
+    text-align: center; 
   }
 
   .dropdown-menu li a {
@@ -258,27 +258,27 @@
   }
 
   .logo {
-    max-width: 140px; /* Ajuste o tamanho da logo para dispositivos móveis */
+    max-width: 140px; 
   }
 
   .menu-text {
-    display: none; /* Esconda o texto do menu em dispositivos móveis */
+    display: none; 
   }
 
   .menu-toggle-wrapper {
     margin-top: 0;
     margin-right: 40px;
-    position: relative; /* Importante para o posicionamento do dropdown */
+    position: relative; 
     z-index: 100;
   }
 
   .dropdown-menu {
-    position: absolute; /* Volta para absolute */
-    top: 100%; /* Posiciona o menu abaixo do botão */
-    right: 0; /* Alinha o menu à direita */
-    background-color: #fff; /* Adicione um fundo para o menu */
-    width: 100px; /* Defina uma largura para o menu */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para o menu */
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    background-color: #fff; 
+    width: 100px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
 
   .dropdown-menu ul {
@@ -288,7 +288,7 @@
   }
 
   .dropdown-menu li {
-    text-align: center; /* Alinhe o texto à esquerda */
+    text-align: center; 
   }
 
   .dropdown-menu li a {
@@ -845,13 +845,13 @@
 
 @media screen and (max-width: 767px) {
   .mySwiper {
-    padding: 40px 10px 0 30px; /* Reduz o padding lateral em telas menores */
+    padding: 40px 10px 0 30px; 
 }
 
 .mySwiper .swiper-slide {
-    max-width: 85px; /* Reduz a largura máxima da thumb em telas menores */
-    height: 85px !important; /* Reduz a altura da thumb em telas menores */
-    margin-right: 5px; /* Reduz o espaço entre as thumbs em telas menores */
+    max-width: 85px; 
+    height: 85px !important; 
+    margin-right: 5px; 
     justify-content: center;
     align-items: center;
 }
@@ -1012,16 +1012,16 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%; 
 }
 
 .contato-imagem img {
-    max-width: 80%; /* Reduzindo o tamanho máximo da imagem */
-    height: auto; /* Altura automática para manter a proporção */
+    max-width: 80%; 
+    height: auto; 
     display: block;
     border-radius: 15px;
     object-fit: cover;
-    object-position: center; /* Centraliza a imagem */
+    object-position: center;
     z-index: 2;
 }
 
@@ -1030,12 +1030,12 @@
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    width: 80%; /* Ajustando a largura do formulário */
+    width: 80%; 
 }
 
 #contact-form {
     z-index: 2;
-    width: 100%; /* Ocupa toda a largura do .contato-formulario */
+    width: 100%; 
 }
 
   .form-group input,
@@ -1047,11 +1047,11 @@
   }
 
   .grafismo {
-    right: auto; /* Remove o posicionamento absoluto */
-    width: 100%; /* Ajusta a largura do grafismo */
-    z-index: 0; /* Coloca o grafismo atrás do conteúdo */
+    right: auto; 
+    width: 100%; 
+    z-index: 0; 
     pointer-events: none;
-    margin-top: 30px; /* Adiciona um espaçamento acima do grafismo */
+    margin-top: 30px; 
 }
 
   .grafismo img {
