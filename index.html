@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Nanum+Myeongjo:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -168,7 +169,7 @@
   </section>
 
   <!-- Seção de Painel -->
-  <section class="section">
+  <section class="section painel">
     <div class="block-center">
       <h4 class="title_area">PROJETO EXCLUSIVO QUE SOMAM MAIS DE 700 LOTES NO TOTAL.</h4>
       <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/Plano-Urbanistico-compressed.jpg" alt="" class="imagem2">
@@ -176,20 +177,24 @@
   </section>
 
 <!-- Seção de Grid -->
-  <section class="grid">
-    <div class="image-container">
+<section class="grid">
+  <div class="image-container">
       <img src="assets/img/gridimgs/imagem1.jpg" alt="Portaria">
-    </div>
-    <div class="image-container">
+      <div class="overlay-text">Portaria</div>
+  </div>
+  <div class="image-container">
       <img src="assets/img/gridimgs/imagem2.jpg" alt="Piscina">
-    </div>
-    <div class="image-container">
+      <div class="overlay-text">Club House</div>
+  </div>
+  <div class="image-container">
       <img src="assets/img/gridimgs/imagem3.jpg" alt="Área com lago">
-    </div>
-    <div class="image-container">
+      <div class="overlay-text">Praia Privativa</div>
+  </div>
+  <div class="image-container">
       <img src="assets/img/gridimgs/imagem4.jpg" alt="Quadras esportivas">
-    </div>
-  </section>
+      <div class="overlay-text">Praça de Esportes</div>
+  </div>
+</section>
 
 <!-- Seção de swiperthumbs -->
 <section class="swiperthumb">
@@ -232,8 +237,8 @@
   </div>
 </section>
   <!-- Seção de Google Maps -->
-  <section id="loc-maps" class="section">
-    <div class="container z-20">
+  <section id="loc-maps" class="section gmaps">
+    <div class="container gwrap">
       <div class="block-center">
       <h5 class="title_maps">Seu lugar privilegiado perto de tudo que Você mais precisa.</h5>
       <div class="div-block-21">
@@ -246,29 +251,100 @@
 
 
   <!-- Seção de Contato -->
-  <section id="contato-forms" class="contact">
+  <section class="contato" id="contato-forms">        
+    <h2 class="title_maps">Entre em Contato</h2>
     <div class="container">
-      <h2>Entre em Contato</h2>
-      <form action="enviar.php" method="post">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="email" name="email" placeholder="Telefone" required>
-        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+        <div class="contato-conteudo">
+            <div class="contato-imagem">
+                <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/PRAIA-PRIVATIVA-2-compressed-1.jpg" alt="Imagem de contato">
+            </div>
+            <div class="contato-formulario">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea cols="40" maxlength="2000" rows="15" id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>    
+        
+    </div>
+<div class="grafismo">
+        <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/GRAFISMOS-06.png" alt="Grafismo">
     </div>
   </section>
 
   <!-- Rodapé -->
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>&copy; 2025 Conviver Riviera. Todos os direitos reservados.</p>
+        <div class="logo">
+            <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/MARCA_HORIZONTAL03.png" alt="Logo Conviver Riviera">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Espaços</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+                <li class="break"><a href="#">Localização</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="#" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
     </div>
-  </footer>
+    <div class="copyright">
+        <p>2023 Copyright - Todos os direitos reservados.</p>
+    </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/utils.js"></script>
+<section class="contactbar">
+  <div class="contact-bar">
+    <div class="container">
+        <div class="sales-channels">
+            <p>Use nossos <span class="bold-text">canais de vendas online</span> <i class="fas fa-chevron-right"></i></p>
+        </div>
+        <div class="contacts">
+            <div class="email">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="text-content">
+                    <span>Atendimento</span>
+                    <span class="bold-text">por e-mail</span>
+                </div>
+            </div>
+            <div class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <div class="text-content">
+                    <span>Atendimento</span>
+                    <span class="bold-text">por WhatsApp</span>
+                </div>
+            </div>
+            <div class="phone">
+                <i class="fas fa-phone"></i>
+                <div class="text-content">
+                    <span>Telefone</span>
+                    <span class="bold-text">85 3198-9300</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/utils.js"></script>
 
 </body>
 </html>

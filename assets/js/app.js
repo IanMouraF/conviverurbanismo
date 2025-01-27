@@ -1,4 +1,5 @@
 var swiper = new Swiper(".carrossel .swiper", {
+  simulateTouch: true,
   speed: 700,
   loop: true,
   slidesPerView: 1,
