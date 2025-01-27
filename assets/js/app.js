@@ -19,3 +19,19 @@ var swiper = new Swiper(".carrossel .swiper", {
   },
 });
 
+window.addEventListener('scroll', () => {
+  const backToTopButton = document.getElementById('back-to-top');
+  if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'flex';
+  } else {
+      backToTopButton.style.display = 'none';
+  }
+});
+
+document.getElementById('back-to-top').addEventListener('click', () => {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});
+

@@ -39,33 +39,50 @@
   margin-top: 20px;
 }
 
-.logo-wrapper {
+.header .container {
   display: flex;
-  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 88px;
 }
 
 .logo {
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  display: flex;
-  width: 150px;
-  height: 136px;
+  display: block;
+  max-width: 150px;
+  width: 100%;
 }
 
-.logo-wrapper img {
-  max-width: 100%;
-  vertical-align: middle;
-  display: inline-block;
+@media screen and (max-width: 767px) {
+  .logo-wrapper {
+    margin-left: 26%;
+  }
 }
 
 /* Menu */
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .menu-toggle-wrapper {
   align-items: center;
   margin-top: 20px;
   display: flex;
-  position: absolute;
-  inset: 30% 5% auto auto;
+  position: relative;
+  cursor: pointer;
 }
 
 .menu-text {
@@ -110,14 +127,176 @@
   display: block;
 }
 
-@media screen and (max-width: 767px) {
+/* Menu Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 55%; 
+  transform: translateX(-50%);
+  width: 200px; 
+
+  border-radius: 10px;
+  z-index: 10;
+  text-align: center;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  background-color: var(--azul-escuro);
+  text-align: center;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden;
+  opacity: .9;
+}
+
+.dropdown-menu li.first {
+  text-align: center;
+  border-radius:10px 10px 0px 0px;
+  overflow: hidden;
+}
+
+.dropdown-menu li.last {
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #ededed;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  opacity: 1;
+}
+
+/* Submenu */
+.dropdown-menu .submenu {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-menu li:hover .submenu {
+  display: block;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.menu-toggle-wrapper {
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 1460px) {
+  .logo-wrapper {
+    margin-left: 128px;
+  }
+
+  .menu-wrapper {
+    margin-right: 50px;
+  }
+
   .menu-text {
-    display: none;
+    display: none; /* Esconda o texto do menu em dispositivos móveis */
   }
 
   .menu-toggle-wrapper {
     margin-top: 0;
+    margin-right: 40px;
+    position: relative; /* Importante para o posicionamento do dropdown */
+    z-index: 100;
   }
+
+  .dropdown-menu {
+    position: absolute; /* Volta para absolute */
+    top: 100%; /* Posiciona o menu abaixo do botão */
+    right: 0; /* Alinha o menu à direita */
+    width: 200px; /* Defina uma largura para o menu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para o menu */
+  }
+
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-menu li {
+    text-align: center; /* Alinhe o texto à esquerda */
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-wrapper {
+    margin-right: 0;
+  }
+
+  .logo-wrapper {
+    margin-left: 78px;
+  }
+
+  .logo {
+    max-width: 140px; /* Ajuste o tamanho da logo para dispositivos móveis */
+  }
+
+  .menu-text {
+    display: none; /* Esconda o texto do menu em dispositivos móveis */
+  }
+
+  .menu-toggle-wrapper {
+    margin-top: 0;
+    margin-right: 40px;
+    position: relative; /* Importante para o posicionamento do dropdown */
+    z-index: 100;
+  }
+
+  .dropdown-menu {
+    position: absolute; /* Volta para absolute */
+    top: 100%; /* Posiciona o menu abaixo do botão */
+    right: 0; /* Alinha o menu à direita */
+    background-color: #fff; /* Adicione um fundo para o menu */
+    width: 100px; /* Defina uma largura para o menu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para o menu */
+  }
+
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-menu li {
+    text-align: center; /* Alinhe o texto à esquerda */
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+
 }
 
 /* Banner */
@@ -818,39 +997,46 @@
 
 @media screen and (max-width: 1400px) {
   .contato .container {
-      display: block;
-  }
-
-  .contato-conteudo {
-      display: block;
-  }
-
-  .contato-imagem {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-  }
-
-  .contato-imagem img {
-      max-width: 100%; 
-      max-height: 150px; 
-      width: auto; 
-      height: auto; 
-      display: block;
-      border-radius: 15px;
-      object-fit: cover; 
-  }
-
-  .contato-formulario {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+}
+
+.contato-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-imagem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.contato-imagem img {
+    max-width: 80%; /* Reduzindo o tamanho máximo da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    display: block;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center; /* Centraliza a imagem */
     z-index: 2;
 }
 
-  #contact-form {
+.contato-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 2;
-  }
+    width: 80%; /* Ajustando a largura do formulário */
+}
+
+#contact-form {
+    z-index: 2;
+    width: 100%; /* Ocupa toda a largura do .contato-formulario */
+}
 
   .form-group input,
   .form-group textarea {
@@ -861,19 +1047,21 @@
   }
 
   .grafismo {
-    position: absolute;
-    bottom: 40%;
-    right: 5%;
-    width: 90%;
-    z-index: 1;
+    right: auto; /* Remove o posicionamento absoluto */
+    width: 100%; /* Ajusta a largura do grafismo */
+    z-index: 0; /* Coloca o grafismo atrás do conteúdo */
     pointer-events: none;
-  }
-  
+    margin-top: 30px; /* Adiciona um espaçamento acima do grafismo */
+}
+
   .grafismo img {
     width: 100%;
     display: block;
     opacity: .4;
   }
+  .contato-formulario button{
+    margin-top: 0;
+}
 }
 
 .div-block-21 {
@@ -1196,4 +1384,33 @@ footer .copyright p {
     text-align: center; 
     flex-direction: column !important;
   }
+}
+
+/* Back to Top */
+#back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+  background-color: #052236;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 100;
+  transition: opacity 0.3s ease, bottom 0.2s;
+  justify-content: center;
+  align-items: center;
+}
+
+#back-to-top:hover {
+  bottom: 85px;
+  opacity: 1;
+}
+
+#back-to-top i {
+  pointer-events: none;
 }

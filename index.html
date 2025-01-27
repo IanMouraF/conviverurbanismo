@@ -18,19 +18,29 @@
     <div class="container">
       <div class="navigation">
         <div class="logo-wrapper">
-          <img class="logo" src="assets/img/logo.webp" alt="Conviver Riviera Logo" >
+          <img class="logo" src="assets/img/logo.webp" alt="Conviver Riviera Logo">
         </div>
-        <div class="menu-toggle-wrapper">
-          <div class="menu-text">
-            Menu
+        <div class="menu-wrapper">
+          <div class="menu-toggle-wrapper">
+            <div class="menu-text">Menu</div>
+            <a class="nav-menu-open w-inline-block">
+              <div class="menu-open-div _5"></div>
+              <div class="menu-open-div _4"></div>
+              <div class="menu-open-div _3"></div>
+            </a>
+            <nav class="dropdown-menu">
+              <ul>
+                <li class="first"><a href="#">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tour">Tour Virtual</a></li>
+                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#loc-maps">Localização</a></li>
+                <li class="last"><a href="#contato-forms">Contato</a></li>
+              </ul>
+            </nav>
           </div>
-          <a class="nav-menu-open w-inline-block">
-            <div class="menu-open-div _5"></div>
-            <div class="menu-open-div _4"></div>
-            <div class="menu-open-div _3"></div>
-          </a>
         </div>
-    </div>
+      </div>
     </div>
   </header>
 
@@ -68,7 +78,7 @@
   </section>
 
   <!-- Carrossel -->
-  <section class="section section-grey">
+  <section id="sobre" class="section section-grey">
     <img src="https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/GRAFISMOS_Prancheta-1.png" 
     alt="" class="image-241">
     <div class="container carrossel">
@@ -150,7 +160,7 @@
   </section>
 
   <!-- Seção de Tour Virtual -->
-  <section class="section">
+  <section id="tour" class="section">
     <div class="container">
       <div class="block-center supenderblock">
         <h3 class="title-grid mt center space-tour">tour virtual do empreendimento</h3>
@@ -177,7 +187,7 @@
   </section>
 
 <!-- Seção de Grid -->
-<section class="grid">
+<section id="fotos" class="grid">
   <div class="image-container">
       <img src="assets/img/gridimgs/imagem1.jpg" alt="Portaria">
       <div class="overlay-text">Portaria</div>
@@ -341,6 +351,10 @@
     </div>
   </div>
 </section>
+
+<button id="back-to-top" title="Voltar ao Topo">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/js/app.js"></script>
