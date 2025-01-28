@@ -1,0 +1,12 @@
+/* Seção do Googlemaps */
+@media screen and (max-width: 767px) {
+  .image-241 {
+    display: none;
+  }
+
+  .gwrap .block-center {
+    padding-top: 5vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+}

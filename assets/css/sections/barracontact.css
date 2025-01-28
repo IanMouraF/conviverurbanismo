@@ -1,0 +1,113 @@
+.contact-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #314d42;
+  color: white;
+  padding: 10px 0; 
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.contact-bar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-bar .sales-channels {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact-bar .sales-channels p {
+  margin: 0;
+  font-size: 14px; 
+}
+
+.contact-bar .sales-channels .fas {
+  margin-left: 50px; 
+  margin-right: 50px;
+  font-size: 20px; 
+}
+
+.contact-bar .sales-channels p,
+.contact-bar .sales-channels i {
+  color: #fff;
+}
+
+.contact-bar .contacts {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.contact-bar .contacts > div {
+  margin-left: 20px; 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact-bar .contacts i {
+  font-size: 18px; 
+  color: #fff;
+  margin-right: 10px; 
+}
+
+.contact-bar .contacts .text-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px; 
+  color: #fff;
+  text-align: left; 
+}
+
+
+.contact-bar .sales-channels {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+
+@media (max-width: 767px) {
+  .contact-bar {
+      padding: 15px 0; 
+      display: none;
+  }
+
+  .contact-bar .container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .contact-bar .contacts {
+      width: 100%;
+      justify-content: space-around;
+  }
+
+  .contact-bar .contacts > div {
+      margin-left: 0;
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .contact-bar .contacts i {
+      margin-right: 0; 
+      margin-bottom: 5px; 
+  }
+
+  .contact-bar .sales-channels {
+      margin-bottom: 0; 
+  }
+  .contact-bar .contacts .text-content {
+    text-align: center; 
+    flex-direction: column !important;
+  }
+}

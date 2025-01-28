@@ -1,0 +1,44 @@
+/* Divisor */
+
+.section {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.divisor_section {
+  background-color: var(--midnight-blue);
+  background-image: url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/6512e7d62c79da02f71bf34a_BC1.webp);
+  background-position: 50%;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.text_divisor {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.div-block-14 {
+  background-image: linear-gradient(#00000080, #00000080),
+    url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/CLUB-HOUSE-2-compressed.jpg);
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+  height: 53.8rem;
+}
+
+@media screen and (max-width: 767px) {
+  .div-block-14 {
+      height: 321px;
+  }
+}

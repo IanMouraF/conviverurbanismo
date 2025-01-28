@@ -72,3 +72,7 @@ h4 {
 h5 {
   line-height: 20px;
 }
+
+.bold-text {
+  font-weight: bold;
+}

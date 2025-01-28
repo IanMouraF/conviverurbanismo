@@ -1,0 +1,238 @@
+/* Seção de Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--azul-escuro);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.image-container:hover::before {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #231f20; 
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+  width: 25%; 
+  background-color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 8px 0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.image-container:hover .overlay-text {
+  opacity: .8;
+}
+
+@media screen and (max-width: 767px) {
+  .grid {
+    display: inline-block;
+  }
+
+  .image-container {
+    margin-bottom: 30px;
+  }
+}
+
+/* Seção de SwiperThumbs */
+.mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySwiper2 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 .swiper-slide  img {
+  max-width: 82.3vw;
+  height: 42.3vw;
+  background-color: none;
+}
+
+/* Configurando as thumbs */
+.mySwiper {
+  box-sizing: border-box;
+  padding: 40px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper .swiper-slide {
+  width: 96px !important; 
+  height: 96px !important; 
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+/* Ajustando imagens das thumbs */
+.mySwiper .swiper-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0;
+}
+
+.mySwiper .swiper-wrapper {
+  width: auto;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+.swiper-button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.mySwiper2 .swiper-button-prev,
+.mySwiper2 .swiper-button-next {
+  width: 25px;
+  height: 25px;
+  color: #7a7a7a;
+}
+
+.mySwiper2 .swiper-button-prev::after {
+  content: '\f104';
+  font-family: 'Font Awesome 5 free';
+  font-weight: 900;
+}
+
+.mySwiper2 .swiper-button-next::after {
+  content: '\f105';
+  font-family: 'Font Awesome 5 free';
+  font-weight: 900;
+}
+
+.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-left {
+  background-image: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mySwiper {
+    padding: 40px 10px 0 30px; 
+}
+
+.mySwiper .swiper-slide {
+    max-width: 85px; 
+    height: 85px !important; 
+    margin-right: 5px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.mySwiper .swiper-wrapper{
+  justify-content: center;
+  width: auto;
+  display: flex;
+}
+
+.mySwiper2 .swiper-button-prev,
+.mySwiper2 .swiper-button-next {
+  display: none;
+}
+
+}
