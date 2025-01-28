@@ -1,4 +1,11 @@
 /* Banner */
+.banner .container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+}
+
 .banner {
   background-color: var(--acinzentado);
   background-image: linear-gradient(#0003, #0003), url(https://www.conviverurbanismo.com.br/riviera/wp-content/themes/conviver-riviera/assets/images/65253dd6816c4f99f9996839_imagempraianova.webp);
@@ -10,22 +17,23 @@
   height: 100vh;
   padding-top: 120px;
   position: relative;
+  overflow: hidden; /* Adicionado para evitar que a imagem vaze */
 }
 
 .banner-content {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  max-width: 35vw;
+  max-width: 35vw; /* Ajuste se necessário */
   height: 70%;
   margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
   display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Centraliza usando transform */
 }
 
 .banner h1 {
@@ -93,10 +101,22 @@
   border-color: var(--white);
 }
 
+/* Imagem de fundo */
+
+
+.banner > div:first-child > img { /* Seleciona a imagem dentro do primeiro div */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço, mantendo a proporção */
+  object-position: center; /* Centraliza a imagem */
+}
+
 @media screen and (max-width: 767px) {
   .button.primary {
     padding: 10px 20px;
   }
 
-  
+  .banner-content {
+    max-width: 80vw; /* Aumenta a largura do conteúdo em telas menores */
+  }
 }
